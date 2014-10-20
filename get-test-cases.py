@@ -9,8 +9,13 @@ rally = Rally(server, user, password, workspace=workspace, project=project)
 rally.enableLogging('mypyral.log')
 
 story_id = 23700352473
-response = rally.get('UserStory', query='oid=23700352473')
+response = rally.get('UserStory', query='FormattedID = S9006')
 print response
+for story in response:
+    '''print story.details()'''
+    for case in story.TestCases:
+        print case.Name
+        print case.Description
 
 '''story_titles = [story.Name for story in response]
 
