@@ -1,3 +1,5 @@
+# copy to user.cfg and change the placeholders
+
 USER = user.name@email.com
 PASSWORD = 123456
 SERVER = rally1.rallydev.com

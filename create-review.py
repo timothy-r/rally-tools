@@ -8,8 +8,8 @@ server, user, password, apikey, workspace, project = rallyWorkset(options)
 rally = Rally(server, user, password, workspace=workspace, project=project)
 rally.enableLogging('mypyral.log')
 
-response = rally.get('UserStory', query='Iteration.oid = 21026582216')
+response = rally.get('UserStory', query='Iteration.oid = id')
 
 for story in response:
-    print story.FormattedId story.Name
+    print "%s  %s" % (story.FormattedId, story.Name)
 
